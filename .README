@@ -1,0 +1,8 @@
+# OpenCV Emotion Detection
+This is a university project by me for the Computer Vision module.
+
+The README of this project is still in progress. I plan on crediting most of the sources I used (in due time).
+
+But for now, you can download the files and install the dependencies with `pip install -r requirements.txt` and run the `main.py` file.
+
+More details will be provided in the next few days.
