@@ -30,5 +30,5 @@ pip install -r requirements.txt
 * [This Medium Article](https://medium.com/@amit25173/opencv-emotion-recognition-55592e299966)
 * ChatGPT
 * Kaggle (for datasets)
-* OpenCV Documentation (Mainly [the cascade classifier part](https://docs.opencv.org/4.x/db/d28/* tutorial_cascade_classifier.html))
+* OpenCV Documentation (Mainly [the cascade classifier part](https://docs.opencv.org/4.x/db/d28/tutorial_cascade_classifier.html))
 * Gamma
