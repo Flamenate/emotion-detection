@@ -1,4 +1,7 @@
 venv/
 *.csv
 *.dat
-face.png
+*.png
+*.webp
+*.jpg
+__pycache__/

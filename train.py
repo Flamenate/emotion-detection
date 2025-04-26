@@ -1,4 +1,3 @@
-import tensorflow as tf
 from tensorflow.keras import layers, models
 import pandas as pd
 import numpy as np
@@ -13,23 +12,22 @@ X = X / 255.0  # Normalize pixel values
 # Convert labels to one-hot encoding
 y = pd.get_dummies(df['emotion']).values
 
-# Split the data into training (80%) and test (20%) sets
+# Split the data into training (70%) and test (30%) sets
 X_train, X_test, y_train, y_test = train_test_split(
     X, y,
-    test_size=0.2,
+    test_size=0.3,
     random_state=42,
-    stratify=y  # Maintain class distribution
+    stratify=y 
 )
 
-# Further split training data into training (80%) and validation (16% of total)
+# Further split training data into training (70%) and validation (16% of total)
 X_train, X_val, y_train, y_val = train_test_split(
     X_train, y_train,
-    test_size=0.2,
+    test_size=0.3,
     random_state=42,
     stratify=y_train
 )
 
-# Define the model
 model = models.Sequential([
     layers.Conv2D(32, (3, 3), activation='relu', input_shape=(48, 48, 1)),
     layers.MaxPooling2D((2, 2)),
@@ -42,15 +40,14 @@ model = models.Sequential([
     layers.Dense(7, activation='softmax')
 ])
 
-# Compile the model
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
-# Train the model
+
 model.fit(
     X_train, y_train,
     epochs=25,
     validation_data=(X_val, y_val),
-    batch_size=32
+    batch_size=32,
 )
 
 model.save('emotion_model.h5')

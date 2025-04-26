@@ -2,7 +2,7 @@ opencv-python
 tensorflow
 tf-keras
 numpy==1.26.4
-venv/dlib-19.24.99-cp312-cp312-win_amd64.whl
+venv/dlib-19.24.99-cp312-cp312-win_amd64.whl # we can't include this version of dlib correctly because it doesn't build wheels correctly for Windows.
 DeepFace
 scikit-learn
 pandas
